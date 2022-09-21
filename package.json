@@ -6,8 +6,7 @@
     "build": "npx tsc",
     "jasmine": "jasmine",
     "test": "npm run build && npm run jasmine",
-    "start": "nodemon src/index.ts",
-    "start-build": "nodemon build/index.js",
+    "start": " npx tsc && nodemon build/index.js",
     "lint": "eslint . --ext .ts", 
     "lint:fix": "eslint --fix",
     "format": "prettier --write \"src/**/*.ts\" "
