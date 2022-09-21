@@ -1,6 +1,12 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const myFunc = (num) => {
-    return 25;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-exports.default = myFunc;
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = __importDefault(require("express"));
+var routes_1 = __importDefault(require("./routes"));
+var app = (0, express_1.default)();
+var port = 3000;
+app.use('/resize', routes_1.default);
+app.listen(port, function () {
+});
