@@ -48,11 +48,14 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                if (!(Object.keys(req.query).length == 3 && req.query.width && req.query.height && req.query.filename)) return [3 /*break*/, 4];
+                if (!(Object.keys(req.query).length == 3 &&
+                    req.query.width &&
+                    req.query.height &&
+                    req.query.filename)) return [3 /*break*/, 4];
                 width = +req.query.width;
                 height = +req.query.height;
                 originalFilename = req.query.filename.toString();
-                outputFilename = originalFilename + 'Width' + width + 'Height' + height + ".jpg";
+                outputFilename = originalFilename + 'Width' + width + 'Height' + height + '.jpg';
                 filename = originalFilename + '.jpg';
                 if (!fs_1.default.existsSync("./images/editedImages/".concat(outputFilename))) return [3 /*break*/, 1];
                 // File exists in path
@@ -68,7 +71,7 @@ routes.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, f
                 _a.label = 3;
             case 3: return [3 /*break*/, 5];
             case 4:
-                res.status(400).send("Bad params");
+                res.status(204).send('Bad params');
                 _a.label = 5;
             case 5: return [2 /*return*/];
         }

@@ -47,7 +47,9 @@ function resize(width, height, filename, outputFile) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, (0, sharp_1.default)("images/".concat(filename)).resize({ height: height, width: width }).toFile("images/editedImages/".concat(outputFile))];
+                    return [4 /*yield*/, (0, sharp_1.default)("images/".concat(filename))
+                            .resize({ height: height, width: width })
+                            .toFile("images/editedImages/".concat(outputFile))];
                 case 1:
                     _a.sent();
                     return [3 /*break*/, 3];

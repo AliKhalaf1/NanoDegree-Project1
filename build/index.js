@@ -9,4 +9,6 @@ var app = (0, express_1.default)();
 var port = 3000;
 app.use('/resize', routes_1.default);
 app.listen(port, function () {
+    console.log("server started at http://localhost:".concat(port));
 });
+exports.default = app;
