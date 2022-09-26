@@ -27,11 +27,15 @@
    ```js
    npm run start;
    ```
-2. Building
+2. application url example`
+   ```js
+   http://localhost:3000/resize?width=200&height=300&filename=fjord;
+   ```
+3. Building
    ```js
    npm run build;
    ```
-3. testing`
+4. testing`
    ```js
    npm run test;
    ```
